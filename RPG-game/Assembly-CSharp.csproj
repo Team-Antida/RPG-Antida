@@ -46,13 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Prefabs 1\Bullet.cs" />
+     <Compile Include="Assets\Scripts 1\Bullet.cs" />
      <Compile Include="Assets\Scripts 1\Camera2d.cs" />
      <Compile Include="Assets\Scripts 1\Controller2D.cs" />
      <Compile Include="Assets\Scripts 1\Enemy.cs" />
      <Compile Include="Assets\Scripts 1\GameManager.cs" />
      <Compile Include="Assets\Scripts 1\MovingPlatform.cs" />
-     <Compile Include="Assets\Scripts 1\PlayerAttack.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

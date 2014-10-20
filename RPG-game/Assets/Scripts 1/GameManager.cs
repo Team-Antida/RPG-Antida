@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
 	public int playersHealth = 3;
 	// Use this for initialization
 
+
 	void OnGUI()
 	{
 		//Controls players healths texture

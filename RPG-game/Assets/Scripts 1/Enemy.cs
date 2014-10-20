@@ -15,10 +15,25 @@ public class Enemy : MonoBehaviour {
 	//enemy moving right or left
 	bool moveRight = true;
 
+	//Enemy's health
+	int enemyHealth = 1;
+
+	//types of enemies
+	public bool basicEnemy;
+	public bool advancedEnemy;
+
 	void Awake()
 	{
 		startPos = transform.position.x;
 		endPos = startPos + unitsMove;
+		if (basicEnemy) 
+		{
+			enemyHealth = 3;
+		}
+		if (advancedEnemy)
+		{
+			enemyHealth = 6;
+		}
 	}
 
 	void Update()
@@ -26,6 +41,7 @@ public class Enemy : MonoBehaviour {
 		if (moveRight) 
 		{
 			rigidbody.position += Vector3.right *moveSpeed*Time.deltaTime;
+			rigidbody.transform.rotation = Quaternion.Euler(transform.rotation.x,0,transform.rotation.z);
 		}
 		if (rigidbody.position.x >= endPos) 
 		{
@@ -33,6 +49,7 @@ public class Enemy : MonoBehaviour {
 		}
 		if (!moveRight) 
 		{
+			rigidbody.transform.rotation = Quaternion.Euler(transform.rotation.x,180,transform.rotation.z);
 			rigidbody.position -= Vector3.right *moveSpeed*Time.deltaTime;
 		}
 		if (rigidbody.position.x <= startPos) 
@@ -47,6 +64,19 @@ public class Enemy : MonoBehaviour {
 		{
 			gameManager.SendMessage("PlayerDamage",damageValue,SendMessageOptions.DontRequireReceiver);
 			gameManager.controller2D.SendMessage("TakenDamage",SendMessageOptions.DontRequireReceiver);
+		}
+	}
+	//enemy taking damage
+	void EnemyDamaged(int damage)
+	{
+		if (enemyHealth > 0) 
+		{
+			enemyHealth -= damage;
+		}
+		if (enemyHealth <= 0)
+		{
+			enemyHealth = 0;
+			Destroy(gameObject);
 		}
 	}
 }
