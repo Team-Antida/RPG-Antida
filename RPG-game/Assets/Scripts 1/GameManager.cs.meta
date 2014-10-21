@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 489ed9c852e59fd49896bb8be7e23485
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - controller2D: {instanceID: 0}
+  - playersHealthTexture: {fileID: 2800000, guid: 43342af7465efd74ab954374c2a312d7,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
