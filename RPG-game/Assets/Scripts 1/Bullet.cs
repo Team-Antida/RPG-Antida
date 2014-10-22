@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Bullet : MonoBehaviour {
+public class Bullet : MonoBehaviour 
+{
 	int damageValue = 1;
 	void OnTriggerEnter(Collider other)
 	{

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Pause : MonoBehaviour {
+public class Pause : MonoBehaviour
+{
 	
 	void Start()
 	{
@@ -24,5 +25,5 @@ public class Pause : MonoBehaviour {
 			}    
 			yield return null;    
 		}
-	}
+    }
 }

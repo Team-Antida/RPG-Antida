@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 	//Reference to COntroller2D script
 	public Controller2D controller2D;
 	//Players life

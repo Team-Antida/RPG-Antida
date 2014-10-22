@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Controller2D : MonoBehaviour {
+public class Controller2D : MonoBehaviour
+{
 	//reference to craracter controller
 
 	CharacterController characterController;
