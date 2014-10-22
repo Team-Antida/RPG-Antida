@@ -4,7 +4,7 @@ using System.Collections;
 public class Pause : MonoBehaviour
 {
 	
-	void Start()
+	/*void Start()
 	{
 		StartCoroutine(PauseCoroutine());  
 	}
@@ -25,17 +25,19 @@ public class Pause : MonoBehaviour
 			}    
 			yield return null;    
 		}
-    }
+    }*/
 
-	/*public bool paused;
-	void OnGUI() {
-		if (paused) 
+	private bool paused = false;
+
+	void Update () {
+		if(Input.GetKeyUp(KeyCode.P))
 		{
-			GUI.Label (new Rect (100, 100, 50, 50), "Game paused");
+			paused = !paused;
 		}
 		
+		if(paused)
+			Time.timeScale = 0;
+		else
+			Time.timeScale = 1;
 	}
-	void OnApplicationPause(bool pauseStatus) {
-		paused = pauseStatus;
-	}*/
 }
