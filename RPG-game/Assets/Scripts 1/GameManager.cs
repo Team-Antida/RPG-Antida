@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	void RestartScene()
+	public void RestartScene()
 	{
 		Application.LoadLevel (Application.loadedLevel);
 	}
