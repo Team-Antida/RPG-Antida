@@ -9,8 +9,7 @@ public class PitKiller : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            gameManager.SendMessage("PlayerDamage", 9999, SendMessageOptions.DontRequireReceiver);
-            gameManager.controller2D.SendMessage("TakenDamage", SendMessageOptions.DontRequireReceiver);
+            col.gameObject.SendMessage("PlayerDamage", 9999, SendMessageOptions.DontRequireReceiver);
         }
     }
 }
