@@ -185,10 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 464281081}
-  unitsMove: 0
-  moveSpeed: 2
-  basicEnemy: 1
-  advancedEnemy: 0
 --- !u!95 &207792025
 Animator:
   serializedVersion: 3
@@ -408,6 +404,8 @@ MonoBehaviour:
   controller2D: {fileID: 1703163278}
   playersHealthTexture: {fileID: 2800000, guid: 43342af7465efd74ab954374c2a312d7,
     type: 3}
+  heartTexture: {fileID: 2800000, guid: 43342af7465efd74ab954374c2a312d7, type: 3}
+  shootTexture: {fileID: 2800000, guid: 875fcda398d02c8499a2c5eac963e72a, type: 3}
   screenPositionX: 0
   screenPositionY: 0
   iconSizeX: 25
@@ -535,10 +533,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 464281081}
-  unitsMove: 10
-  moveSpeed: 5
-  basicEnemy: 0
-  advancedEnemy: 1
 --- !u!1 &869298449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,10 +1535,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 464281081}
-  unitsMove: 10
-  moveSpeed: 5
-  basicEnemy: 1
-  advancedEnemy: 0
 --- !u!65 &2085092161
 BoxCollider:
   m_ObjectHideFlags: 0

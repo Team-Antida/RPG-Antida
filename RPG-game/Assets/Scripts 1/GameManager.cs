@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 	public Controller2D controller2D;
 	//Players life
 	public Texture playersHealthTexture;
+	public Texture heartTexture;
+	public Texture shootTexture;
 	//Control screen position of texture
 	public float screenPositionX;
 	public float screenPositionY;
@@ -19,7 +21,7 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 
 	public int currentEXP = 0;
-	int maxEXP = 50;
+	int maxEXP = 150;
 	int level = 1;
 
 	bool playerStats;
@@ -114,21 +116,23 @@ public class GameManager : MonoBehaviour
 			RestartScene();
 		}
 	}
+
 	void RestartScene()
 	{
 		Application.LoadLevel (Application.loadedLevel);
 	}
 	public void InventoryWindow(int id)
 	{
-		if (GUI.Button (new Rect (20, 40, 120, 20), "+ Lifes"))
+		if (GUI.Button (new Rect (20, 40, 40, 50),heartTexture)&& currentEXP >=100)
 		{
 			playersHealth++;
+			currentEXP -=100;
 		}
-		if (GUI.Button (new Rect (20, 80, 120, 20), "+ Shooting Range"))
+		if (GUI.Button (new Rect (20, 120, 40, 50),shootTexture) && currentEXP >=50)
 		{
 			controller2D.bulletForce +=10;
+			currentEXP-=50;
 		}
-		GUI.DragWindow ();
 		GUI.DragWindow ();
 	}
 }
