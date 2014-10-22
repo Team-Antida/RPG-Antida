@@ -26,7 +26,9 @@ public class Controller2D : MonoBehaviour
 	float attackRate = 0.5f;
 	float coolDown;
 
-	int facing = 1; // 1 for right -1 for left
+    // 1 for right -1 for left
+	int facing = 1; 
+
 	public int bulletForce = 500;
 	// Use this for initialization
 	void Start ()
@@ -77,10 +79,6 @@ public class Controller2D : MonoBehaviour
         {
             moveDirection.x = 0;
         }
-
- 
-
-
 
 		//Controls jumping
 		if (characterController.isGrounded)
