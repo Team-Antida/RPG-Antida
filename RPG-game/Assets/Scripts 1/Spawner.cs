@@ -7,15 +7,18 @@ public class Spawner : MonoBehaviour {
 	Vector3 spawnPosition;
 	public float timer= 0.0f;
 	
-	void  spawn_cube (){
+	void spawnEnemy ()
+    {
 		spawnPosition = new Vector3(0,0,0);
 		Instantiate(enemy,spawnPosition,Quaternion.identity);
 	}
 	
-	void  Update (){
+	void  Update ()
+    {
 		timer += Time.deltaTime;
-		if(timer > 10){
-			spawn_cube();
+		if(timer > 10)
+        {
+			spawnEnemy();
 			timer = 0.0f;
 		}
 	}
