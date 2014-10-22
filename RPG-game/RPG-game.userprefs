@@ -1,32 +1,16 @@
-<<<<<<< .mine
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts 1\SpawnerManager.cs">
-    <Files>
-      <File FileName="..\..\..\..\UnityProjects\2DPlatformer\Test2DPlatfoermer\Assets\Scripts\Spawner.cs" Line="17" Column="2" />
-      <File FileName="..\..\..\..\UnityProjects\2DPlatformer\Test2DPlatfoermer\Assets\Scripts\BackgroundPropSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts 1\SpawnerManager.cs" Line="30" Column="4" />
-      <File FileName="..\..\..\..\UnityProjects\2DPlatformer\Test2DPlatfoermer\Assets\Scripts\Enemy.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-=======
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts 1\Bullet.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts 1\Pause.cs">
     <Files>
       <File FileName="Assets\Scripts 1\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts 1\Enemy.cs" Line="31" Column="5" />
-      <File FileName="Assets\Scripts 1\HellBoar.cs" Line="19" Column="3" />
-      <File FileName="Assets\Scripts 1\Bullet.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\UnityProjects\2DPlatformer\Test2DPlatfoermer\Assets\Scripts\Pauser.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts 1\Pause.cs" Line="9" Column="38" />
+      <File FileName="..\..\..\..\UnityProjects\2DPlatformer\Test2DPlatfoermer\Assets\Scripts\Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts 1\Controller2D.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
->>>>>>> .r47
 </Properties>
