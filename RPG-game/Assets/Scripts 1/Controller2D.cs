@@ -26,7 +26,7 @@ public class Controller2D : MonoBehaviour
 	float attackRate = 0.5f;
 	float coolDown;
 
-	bool lookRight = true;
+	int facing = 1; // 1 for right -1 for left
 	public int bulletForce = 500;
 	// Use this for initialization
 	void Start ()
@@ -47,27 +47,39 @@ public class Controller2D : MonoBehaviour
 		//Controls players gravity
 		moveDirection.y -= gravity * Time.deltaTime;
 
-		if (horizontal > 0.01f) 
-		{
-			lookRight = true;
-			moveDirection.x = horizontal*walkSpeed;
-			transform.rotation = Quaternion.Euler(transform.rotation.x,0,transform.rotation.z);
-		}
-		//Moves player left		
-		if (horizontal< 0.01f) 
-		{
-			lookRight = false;
-			moveDirection.x = horizontal*walkSpeed;
-			transform.rotation = Quaternion.Euler(transform.rotation.x,180,transform.rotation.z);
-		} 
+        //Facing
 
+        if (facing > 0)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+        }
 
-		if (horizontal == 0)  
+        else
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
+        }
+        
+        //Movement
+        if (horizontal == 1)
+        {
+            facing = 1;
+            moveDirection.x = horizontal * walkSpeed;
+        }
+
+			
+		if (horizontal == -1) 
 		{
-			moveDirection.x = horizontal;
-			transform.rotation = Quaternion.Euler(transform.rotation.x,0,transform.rotation.z);
-			lookRight = true;
+			facing = -1;
+			moveDirection.x = horizontal*walkSpeed;
 		}
+
+        if (horizontal == 0)
+        {
+            moveDirection.x = 0;
+        }
+
+ 
+
 
 
 		//Controls jumping
@@ -90,7 +102,7 @@ public class Controller2D : MonoBehaviour
 	}
 	void BulletAttack()
 	{
-		if (lookRight)
+		if (facing > 0)
 		{
 			Rigidbody bPrefab = Instantiate (bulletPrefab, transform.position, Quaternion.identity) as Rigidbody;
 			bPrefab.rigidbody.AddForce (Vector3.right * bulletForce);
