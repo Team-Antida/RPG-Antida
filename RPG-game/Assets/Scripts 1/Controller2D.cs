@@ -4,8 +4,9 @@ using System.Collections;
 public class Controller2D : MonoBehaviour
 {
 	//reference to craracter controller
-
 	CharacterController characterController;
+    GameManager gameManager;
+
 	private Animator animator;
 	//Controls gravity
 	public float gravity = 1;
@@ -27,7 +28,9 @@ public class Controller2D : MonoBehaviour
 	float coolDown;
 
     // 1 for right -1 for left
-	int facing = 1; 
+	int facing = 1;
+
+    public int playersHealth = 3;
 
 	public int bulletForce = 500;
 	// Use this for initialization
@@ -113,6 +116,15 @@ public class Controller2D : MonoBehaviour
 			coolDown = Time.time + attackRate;
 		}
 	}
+
+    void PlayerDamage(int damage)
+    {
+        if (playersHealth > 0)
+        {
+            playersHealth -= damage;
+        }
+
+    }
 
 	public IEnumerator TakenDamage()
 	{

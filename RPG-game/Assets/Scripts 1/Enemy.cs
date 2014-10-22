@@ -83,8 +83,8 @@ public class Enemy : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            gameManager.SendMessage("PlayerDamage", damageValue, SendMessageOptions.DontRequireReceiver);
-            gameManager.controller2D.SendMessage("TakenDamage", SendMessageOptions.DontRequireReceiver);
+            col.gameObject.SendMessage("PlayerDamage", damageValue, SendMessageOptions.DontRequireReceiver);
+            col.gameObject.SendMessage("TakenDamage", SendMessageOptions.DontRequireReceiver);
         }
     }
 

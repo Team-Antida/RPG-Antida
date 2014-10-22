@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 	public float iconSizeX = 25;
 	public float iconSizeY = 25;
 	//Starting lifes
-	public int playersHealth = 3;
+	
 	// Use this for initialization
 
 	public int currentEXP = 0;
@@ -76,6 +76,12 @@ public class GameManager : MonoBehaviour
 		{
 			statsDisplay.text = "";
 		}
+
+        if (controller2D.playersHealth <= 0)
+        {
+            controller2D.playersHealth = 0;
+            RestartScene();
+        }
 	}
 	
 	void LevelUp()
@@ -85,13 +91,13 @@ public class GameManager : MonoBehaviour
 		level++;
 		
 		//Add Stats When Leveling
-		playersHealth++;
+		controller2D.playersHealth++;
 	}
 
 	void OnGUI()
 	{
 		//Controls players healths texture
-		for (int h = 0; h < playersHealth; h++) 
+		for (int h = 0; h < controller2D.playersHealth; h++) 
 		{
 			GUI.DrawTexture(new Rect(screenPositionX+(h*iconSizeX),screenPositionY,iconSizeX,iconSizeY),playersHealthTexture,ScaleMode.ScaleToFit,true,0);
 		}
@@ -104,18 +110,8 @@ public class GameManager : MonoBehaviour
 			RestartScene();
 		}
 	}
-	void PlayerDamage(int damage)
-	{
-		if (playersHealth > 0)
-		{
-			playersHealth -= damage;
-		}
-		if (playersHealth <= 0)
-		{
-			playersHealth = 0;
-			RestartScene();
-		}
-	}
+
+
 
 	public void RestartScene()
 	{
@@ -125,7 +121,7 @@ public class GameManager : MonoBehaviour
 	{
 		if (GUI.Button (new Rect (20, 40, 40, 50),heartTexture)&& currentEXP >=100)
 		{
-			playersHealth++;
+			controller2D.playersHealth++;
 			currentEXP -=100;
 		}
 		if (GUI.Button (new Rect (20, 120, 40, 50),shootTexture) && currentEXP >=50)

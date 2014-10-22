@@ -4,6 +4,7 @@ using System.Collections;
 public class Spawner : MonoBehaviour {
 	
 	public GameObject enemy;
+    public GameManager gameManager;
 	Vector3 spawnPosition;
 	public float timer= 0.0f;
 	
