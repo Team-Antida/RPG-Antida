@@ -97,6 +97,10 @@ public class GameManager : MonoBehaviour
 		if (displayInventory == 1) {
 			inventoryWindowRect = GUI.Window(inventoryWindowId,inventoryWindowRect,InventoryWindow,"Inventory");
 		}
+
+		if(GUI.Button(new Rect(0, 30, 110, 20), "Restart")){
+			RestartScene();
+		}
 	}
 	void PlayerDamage(int damage)
 	{
