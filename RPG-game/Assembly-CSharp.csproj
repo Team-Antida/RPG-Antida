@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts 1\HellBoar.cs" />
      <Compile Include="Assets\Scripts 1\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts 1\Pause.cs" />
+     <Compile Include="Assets\Scripts 1\SpawnerManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
