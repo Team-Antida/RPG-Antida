@@ -5,11 +5,12 @@ public class PitKiller : MonoBehaviour
 {
     public GameManager gameManager;
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider col)
     {
-        if (collision.gameObject.tag != "Enemy")
+        if (col.gameObject.tag == "Player")
         {
-            gameManager.RestartScene();
+            gameManager.SendMessage("PlayerDamage", 9999, SendMessageOptions.DontRequireReceiver);
+            gameManager.controller2D.SendMessage("TakenDamage", SendMessageOptions.DontRequireReceiver);
         }
     }
 }
