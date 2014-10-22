@@ -214,7 +214,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -518,7 +518,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1290,6 +1290,7 @@ MonoBehaviour:
   walkSpeed: 5
   jumpHeight: 9
   bulletPrefab: {fileID: 5400000, guid: 0d3371f64c41be74ca2ea4a4eeb2c2b6, type: 2}
+  bulletForce: 500
 --- !u!95 &1703163279
 Animator:
   serializedVersion: 3
