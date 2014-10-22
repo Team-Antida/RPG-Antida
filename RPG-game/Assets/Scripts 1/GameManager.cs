@@ -17,6 +17,44 @@ public class GameManager : MonoBehaviour {
 	public int playersHealth = 3;
 	// Use this for initialization
 
+	public int currentEXP = 0;
+	int maxEXP = 50;
+	int level = 1;
+	
+	bool playerStats;
+	public GUIText statsDisplay;
+
+	void Update()
+	{
+		if (currentEXP >= maxEXP) 
+		{
+			LevelUp();
+		}
+		
+		if (Input.GetKeyDown(KeyCode.C)) 
+		{
+			playerStats = !playerStats;
+		}
+		
+		if(playerStats)
+		{
+			statsDisplay.text = "Level " + level + ":  XP " + currentEXP + " / " + maxEXP;		
+		}
+		else
+		{
+			statsDisplay.text = "";
+		}
+	}
+	
+	void LevelUp()
+	{
+		currentEXP = 0;
+		maxEXP = maxEXP + 50;
+		level++;
+		
+		//Add Stats When Leveling
+		playersHealth++;
+	}
 
 	void OnGUI()
 	{
