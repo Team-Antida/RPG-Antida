@@ -1,83 +1,105 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
 
-	public GameManager gameManager;
-	int damageValue = 1;
-	//enemy start and end pos
-	float startPos;
-	float endPos;
-	//units enemy moves right
-	public int unitsMove = 5;
-	//enemy's movement speed
-	public int moveSpeed = 5;
-	//enemy moving right or left
-	bool moveRight = true;
+    public GameManager gameManager;
 
-	//Enemy's health
-	int enemyHealth = 1;
+    // Constants:
+    public static readonly int DefaultDamage = 1;
 
-	//types of enemies
-	public bool basicEnemy;
-	public bool advancedEnemy;
+    int damageValue = Enemy.DefaultDamage;
 
-	void Awake()
-	{
-		startPos = transform.position.x;
-		endPos = startPos + unitsMove;
-		if (basicEnemy) 
-		{
-			enemyHealth = 3;
-		}
-		if (advancedEnemy)
-		{
-			enemyHealth = 6;
-		}
-	}
+    //enemy start and end pos
+    private float startPos;
+    private float endPos;
 
-	void Update()
-	{
-		if (moveRight) 
-		{
-			rigidbody.position += Vector3.right *moveSpeed*Time.deltaTime;
-			rigidbody.transform.rotation = Quaternion.Euler(transform.rotation.x,0,transform.rotation.z);
-		}
-		if (rigidbody.position.x >= endPos) 
-		{
-			moveRight = false;
-		}
-		if (!moveRight) 
-		{
-			rigidbody.transform.rotation = Quaternion.Euler(transform.rotation.x,180,transform.rotation.z);
-			rigidbody.position -= Vector3.right *moveSpeed*Time.deltaTime;
-		}
-		if (rigidbody.position.x <= startPos) 
-		{
-			moveRight = true;
-		}
-	}
-	
-	void OnTriggerEnter(Collider col)
-	{
-		if (col.gameObject.tag == "Player") 
-		{
-			gameManager.SendMessage("PlayerDamage",damageValue,SendMessageOptions.DontRequireReceiver);
-			gameManager.controller2D.SendMessage("TakenDamage",SendMessageOptions.DontRequireReceiver);
-		}
-	}
-	//enemy taking damage
-	void EnemyDamaged(int damage)
-	{
-		if (enemyHealth > 0) 
-		{
-			enemyHealth -= damage;
-		}
-		if (enemyHealth <= 0)
-		{
-			enemyHealth = 0;
-			Destroy(gameObject);
-			gameManager.currentEXP += 10; 
-		}
-	}
+    //units enemy moves right
+    private int unitsMove = 5;
+
+    //enemy's movement speed
+    private int moveSpeed = 5;
+
+    //enemy moving right or left
+    protected bool moveRight;
+
+    //Enemy's health
+    private int enemyHealth;
+
+    public int EnemyHealth
+    {
+        protected set
+        {
+            this.enemyHealth = value;
+        }
+
+        get
+        {
+            return this.enemyHealth;
+        }
+    }
+
+    void Awake()
+    {
+        InitEnemy();
+    }
+
+    protected virtual void InitEnemy()
+    {
+        moveRight = true;
+        startPos = transform.position.x;
+        endPos = startPos + unitsMove;
+    }
+
+    void Update()
+    {
+        Move();
+    }
+
+    protected virtual void Move()
+    {
+        if (moveRight)
+        {
+            rigidbody.position += Vector3.right * moveSpeed * Time.deltaTime;
+            rigidbody.transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
+        }
+        if (rigidbody.position.x >= endPos)
+        {
+            moveRight = false;
+        }
+        if (!moveRight)
+        {
+            rigidbody.transform.rotation = Quaternion.Euler(transform.rotation.x, 180, transform.rotation.z);
+            rigidbody.position -= Vector3.right * moveSpeed * Time.deltaTime;
+        }
+        if (rigidbody.position.x <= startPos)
+        {
+            moveRight = true;
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            gameManager.SendMessage("PlayerDamage", damageValue, SendMessageOptions.DontRequireReceiver);
+            gameManager.controller2D.SendMessage("TakenDamage", SendMessageOptions.DontRequireReceiver);
+        }
+    }
+
+    //enemy taking damage
+    void ReceiveDamage(int damage)
+    {
+        if (enemyHealth > 0)
+        {
+            enemyHealth -= damage;
+        }
+        if (enemyHealth <= 0)
+        {
+            enemyHealth = 0;
+            Destroy(gameObject);
+            gameManager.currentEXP += 10;
+        }
+    }
 }
