@@ -6,7 +6,7 @@ public class Pause : MonoBehaviour
 	
 	void Start()
 	{
-		StartCoroutine(PauseCoroutine());    
+		StartCoroutine(PauseCoroutine());  
 	}
 	
 	IEnumerator PauseCoroutine() {
@@ -26,4 +26,16 @@ public class Pause : MonoBehaviour
 			yield return null;    
 		}
     }
+
+	/*public bool paused;
+	void OnGUI() {
+		if (paused) 
+		{
+			GUI.Label (new Rect (100, 100, 50, 50), "Game paused");
+		}
+		
+	}
+	void OnApplicationPause(bool pauseStatus) {
+		paused = pauseStatus;
+	}*/
 }
