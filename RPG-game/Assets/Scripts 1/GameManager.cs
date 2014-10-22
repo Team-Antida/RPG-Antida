@@ -20,9 +20,38 @@ public class GameManager : MonoBehaviour {
 	public int currentEXP = 0;
 	int maxEXP = 50;
 	int level = 1;
-	
+
 	bool playerStats;
 	public GUIText statsDisplay;
+	//Inventory store
+	private int displayInventory ;
+	private const int inventoryWindowId = 1;
+	private Rect inventoryWindowRect = new Rect(10,10,500,200);
+	
+	void Start()
+	{
+		StartCoroutine(InventoryCoroutine()); 
+	}
+	//Inventory controls
+	IEnumerator InventoryCoroutine() {
+		
+		while (true)
+		{
+			if (Input.GetKeyDown(KeyCode.I))
+			{
+				if (displayInventory == 0)
+				{
+					displayInventory = 1;
+					Time.timeScale = 0;
+				} else {
+					displayInventory = 0;
+					Time.timeScale = 1;
+				}
+				
+			}    
+			yield return null;    
+		}
+	}
 
 	void Update()
 	{
@@ -62,7 +91,10 @@ public class GameManager : MonoBehaviour {
 		for (int h = 0; h < playersHealth; h++) 
 		{
 			GUI.DrawTexture(new Rect(screenPositionX+(h*iconSizeX),screenPositionY,iconSizeX,iconSizeY),playersHealthTexture,ScaleMode.ScaleToFit,true,0);
-
+		}
+		//controls inventory - when to show
+		if (displayInventory == 1) {
+			inventoryWindowRect = GUI.Window(inventoryWindowId,inventoryWindowRect,InventoryWindow,"Inventory");
 		}
 	}
 	void PlayerDamage(int damage)
@@ -80,5 +112,9 @@ public class GameManager : MonoBehaviour {
 	void RestartScene()
 	{
 		Application.LoadLevel (Application.loadedLevel);
+	}
+	public void InventoryWindow(int id)
+	{
+		GUI.DragWindow ();
 	}
 }
