@@ -22,3 +22,6 @@ sysinfo.txt
 *.sln
 /RPG-game/*.sln
 /RPG-game/*.userprefs
+/RPG-game/RPG-game.userprefs
+/RPG-game/RPG-game-csharp.sln
+/RPG-game/RPG-game.sln
