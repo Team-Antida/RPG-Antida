@@ -11,7 +11,7 @@ public class Controller2D : MonoBehaviour {
 
 	//Walkspeed
 	public float walkSpeed = 5;
-	public float jumpHeight = 10;
+	public float jumpHeight = 60;
 
 	//Controlling our movement directions
 	Vector3 moveDirection = Vector3.zero;
