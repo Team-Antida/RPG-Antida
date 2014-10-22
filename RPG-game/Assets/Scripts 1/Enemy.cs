@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     protected bool moveRight;
 
     //Enemy's health
-    private int enemyHealth;
+    private int enemyHealth = 3;
 
     public int EnemyHealth
     {
@@ -89,7 +89,7 @@ public class Enemy : MonoBehaviour
     }
 
     //enemy taking damage
-    void ReceiveDamage(int damage)
+	void EnemyDamaged(int damage)
     {
         if (enemyHealth > 0)
         {
