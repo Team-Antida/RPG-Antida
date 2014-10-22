@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Programs/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Programs/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts 1\Controller2D.cs" />
      <Compile Include="Assets\Scripts 1\Enemy.cs" />
      <Compile Include="Assets\Scripts 1\GameManager.cs" />
+     <Compile Include="Assets\Scripts 1\HellBoar.cs" />
      <Compile Include="Assets\Scripts 1\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts 1\Pause.cs" />
   </ItemGroup>
