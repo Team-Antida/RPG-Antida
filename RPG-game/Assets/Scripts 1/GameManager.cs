@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 	//Inventory store
 	private int displayInventory ;
 	private const int inventoryWindowId = 1;
-	private Rect inventoryWindowRect = new Rect(10,30,170,200);
+	private Rect inventoryWindowRect = new Rect(680,10,80,200);
 	
 	void Start()
 	{
