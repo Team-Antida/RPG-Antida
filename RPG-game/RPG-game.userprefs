@@ -1,3 +1,19 @@
+<<<<<<< .mine
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts 1\SpawnerManager.cs">
+    <Files>
+      <File FileName="..\..\..\..\UnityProjects\2DPlatformer\Test2DPlatfoermer\Assets\Scripts\Spawner.cs" Line="17" Column="2" />
+      <File FileName="..\..\..\..\UnityProjects\2DPlatformer\Test2DPlatfoermer\Assets\Scripts\BackgroundPropSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts 1\SpawnerManager.cs" Line="30" Column="4" />
+      <File FileName="..\..\..\..\UnityProjects\2DPlatformer\Test2DPlatfoermer\Assets\Scripts\Enemy.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+=======
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts 1\Bullet.cs">
@@ -12,4 +28,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+>>>>>>> .r47
 </Properties>
