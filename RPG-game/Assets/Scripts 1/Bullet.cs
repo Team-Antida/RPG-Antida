@@ -6,7 +6,6 @@ public class Bullet : MonoBehaviour
 	int damageValue = 1;
 	void OnTriggerEnter(Collider other)
 	{
-		//doesnt work???
 		if (other.gameObject.tag == "Enemy") 
 		{
 			Destroy(gameObject);

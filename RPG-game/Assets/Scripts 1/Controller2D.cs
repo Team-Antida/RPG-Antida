@@ -123,7 +123,6 @@ public class Controller2D : MonoBehaviour
         {
             playersHealth -= damage;
         }
-
     }
 
 	public IEnumerator TakenDamage()
