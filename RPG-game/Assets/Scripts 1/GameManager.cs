@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
 	//Inventory store
 	private int displayInventory ;
 	private const int inventoryWindowId = 1;
-	private Rect inventoryWindowRect = new Rect(10,10,500,200);
+	private Rect inventoryWindowRect = new Rect(10,30,170,200);
 	
 	void Start()
 	{
@@ -115,6 +115,15 @@ public class GameManager : MonoBehaviour {
 	}
 	public void InventoryWindow(int id)
 	{
+		if (GUI.Button (new Rect (20, 40, 120, 20), "+ Lifes"))
+		{
+			playersHealth++;
+		}
+		if (GUI.Button (new Rect (20, 80, 120, 20), "+ Shooting Range"))
+		{
+			controller2D.bulletForce +=10;
+		}
+		GUI.DragWindow ();
 		GUI.DragWindow ();
 	}
 }

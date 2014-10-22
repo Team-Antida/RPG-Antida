@@ -26,6 +26,7 @@ public class Controller2D : MonoBehaviour {
 	float coolDown;
 
 	bool lookRight = true;
+	public int bulletForce = 500;
 	// Use this for initialization
 	void Start ()
 	{
@@ -91,13 +92,13 @@ public class Controller2D : MonoBehaviour {
 		if (lookRight)
 		{
 			Rigidbody bPrefab = Instantiate (bulletPrefab, transform.position, Quaternion.identity) as Rigidbody;
-			bPrefab.rigidbody.AddForce (Vector3.right * 500);
+			bPrefab.rigidbody.AddForce (Vector3.right * bulletForce);
 			coolDown = Time.time + attackRate;
 		} 
 		else 
 		{
 			Rigidbody bPrefab = Instantiate (bulletPrefab, transform.position, Quaternion.identity) as Rigidbody;
-			bPrefab.rigidbody.AddForce (-Vector3.right * 500);
+			bPrefab.rigidbody.AddForce (-Vector3.right * bulletForce);
 			coolDown = Time.time + attackRate;
 		}
 	}
