@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 	public float iconSizeX = 25;
 	public float iconSizeY = 25;
 	//Starting lifes
-	
+	public float timer= 0.0f;
 	// Use this for initialization
 
 	public int currentEXP = 0;
@@ -58,6 +58,11 @@ public class GameManager : MonoBehaviour
 
 	void Update()
 	{
+		timer += Time.deltaTime;
+		if (timer > 10) {
+			currentEXP += 10;
+			timer = 0;
+				}
 		if (currentEXP >= maxEXP) 
 		{
 			LevelUp();
@@ -119,10 +124,10 @@ public class GameManager : MonoBehaviour
 	}
 	public void InventoryWindow(int id)
 	{
-		if (GUI.Button (new Rect (20, 40, 40, 50),heartTexture)&& currentEXP >=100)
+		if (GUI.Button (new Rect (20, 40, 40, 50),heartTexture)&& currentEXP >=50)
 		{
 			controller2D.playersHealth++;
-			currentEXP -=100;
+			currentEXP -=50;
 		}
 		if (GUI.Button (new Rect (20, 120, 40, 50),shootTexture) && currentEXP >=50)
 		{

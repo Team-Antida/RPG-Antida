@@ -398,6 +398,7 @@ MonoBehaviour:
   screenPositionY: 0
   iconSizeX: 25
   iconSizeY: 25
+  timer: 0
   currentEXP: 0
   statsDisplay: {fileID: 1586312420}
 --- !u!4 &464281082
@@ -1203,7 +1204,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548426075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.8727779, y: -18.2296677, z: 0}
+  m_LocalPosition: {x: -27.7541409, y: -15.3670101, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 464281082}
