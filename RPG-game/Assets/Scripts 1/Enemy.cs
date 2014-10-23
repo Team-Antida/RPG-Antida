@@ -99,7 +99,7 @@ public class Enemy : MonoBehaviour
         {
             enemyHealth = 0;
             Destroy(gameObject);
-            gameManager.currentEXP += 10;
+      //      gameManager.currentEXP += 10;
         }
     }
 }

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 	public float iconSizeX = 25;
 	public float iconSizeY = 25;
 	//Starting lifes
-	
+	public float timer= 0.0f;
 	// Use this for initialization
 
 	public int currentEXP = 0;
@@ -58,6 +58,11 @@ public class GameManager : MonoBehaviour
 
 	void Update()
 	{
+		timer += Time.deltaTime;
+		if (timer > 10) {
+			currentEXP += 10;
+			timer = 0;
+				}
 		if (currentEXP >= maxEXP) 
 		{
 			LevelUp();
