@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour {
 	
 	void spawnEnemy ()
     {
-		spawnPosition = new Vector3(0,0,0);
+		spawnPosition = transform.position; //new Vector3(0,0,0);
 		Instantiate(enemy,spawnPosition,Quaternion.identity);
 	}
 	
