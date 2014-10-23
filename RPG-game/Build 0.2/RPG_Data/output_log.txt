@@ -1,0 +1,32 @@
+Initialize engine version: 4.5.4f1 (e036f44c54c9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.0]
+    Renderer: NVIDIA GeForce 9600 GT (ID=0x622)
+    Vendor:   NVIDIA
+    VRAM:     495 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Nicola\Desktop\Softuni\OOP\Teamwork\DungeonCrawler\RPG-game\Build 0.2\RPG_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Nicola\Desktop\Softuni\OOP\Teamwork\DungeonCrawler\RPG-game\Build 0.2\RPG_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Nicola\Desktop\Softuni\OOP\Teamwork\DungeonCrawler\RPG-game\Build 0.2\RPG_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Nicola\Desktop\Softuni\OOP\Teamwork\DungeonCrawler\RPG-game\Build 0.2\RPG_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  9.099 seconds
+desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+UnloadTime: 1.417289 ms
+System memory in use before: 24.8 MB.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 24.7 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 335.
+Total: 1.140089 ms (FindLiveObjects: 0.029333 ms CreateObjectMapping: 0.024444 ms MarkObjects: 0.175022 ms  DeleteObjects: 0.010755 ms)
+
+UnloadTime: 0.936222 ms
+System memory in use before: 24.7 MB.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 24.7 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 332.
+Total: 1.117111 ms (FindLiveObjects: 0.031288 ms CreateObjectMapping: 0.023466 ms MarkObjects: 0.174533 ms  DeleteObjects: 0.011733 ms)
+
