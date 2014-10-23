@@ -124,10 +124,10 @@ public class GameManager : MonoBehaviour
 	}
 	public void InventoryWindow(int id)
 	{
-		if (GUI.Button (new Rect (20, 40, 40, 50),heartTexture)&& currentEXP >=100)
+		if (GUI.Button (new Rect (20, 40, 40, 50),heartTexture)&& currentEXP >=50)
 		{
 			controller2D.playersHealth++;
-			currentEXP -=100;
+			currentEXP -=50;
 		}
 		if (GUI.Button (new Rect (20, 120, 40, 50),shootTexture) && currentEXP >=50)
 		{
